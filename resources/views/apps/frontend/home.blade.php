@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('front_assets/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('front_assets/css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('front_assets/css/style.css') }}">
+	<link rel="icon" href="{{ asset('images/full_logo_colored.png') }}">
 </head>
 <body> 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -48,14 +49,10 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
-          	<p class="d-flex align-items-center" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-				<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center mr-3">
-    				<span class="ion-ios-play play mr-2"></span>
-    				<span class="watch">Watch Video</span>
-    			</a>
-			</p>
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Selamat Datang di Deliana Inti Sukses</h1>
-            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Patner Terpercaya, Berintegritas, Inovatif dan Professional dalam segala bidang</p>
+
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Selamat Datang di <br/>
+				<span style="color: #f03c2f"> Deliana </span> <span style="color: #7cec5a"> Inti Sukses </span></h1>
+            <p class="mb-4" data-scrollax="properties: { translateY: '30%'}">Patner Terpercaya, Berintegritas, Inovatif dan Professional dalam segala bidang</p>
           </div>
         </div>
       </div>
@@ -131,7 +128,7 @@
 									<textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
 								</div>
 								<div class="form-group">
-									<input type="submit" value="Request A Quote" class="btn btn-danger py-3 px-4">
+									<input type="submit" value="Kirim" class="btn btn-danger py-3 px-4">
 								</div>
 			    			</form>
 	    				</div>
@@ -288,6 +285,48 @@
     	</div>
     </section>
 
+	<section class="testimony-section" data-section="testimony">
+		<div class="container">
+		  <div class="row ftco-animate justify-content-center">
+			  <div class="col-md-12 d-flex align-items-center">
+				  <div class="carousel-testimony owl-carousel">
+					  <div class="item">
+						  <div class="testimony-wrap d-flex align-items-stretch">
+								<div class="user-img d-flex align-self-stretch" style="background-image: url({{ asset('images/testimony-1.jpg') }})">
+								</div>
+							  <div class="text d-flex align-items-center">
+								  <div>
+									  <div class="icon-quote">
+										  <span class="icon-quote-left"></span>
+									  </div>
+									  <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+									  <p class="name">Jacob Bolton</p>
+									  <span class="position">Pimpinan Besar</span>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+					  <div class="item">
+						  <div class="testimony-wrap d-flex align-items-stretch">
+								<div class="user-img d-flex align-self-stretch" style="background-image: url({{ asset('images/testimony-2.jpg') }})"></div>
+							  <div class="text d-flex align-items-center">
+								  <div>
+									  <div class="icon-quote">
+										  <span class="icon-quote-left"></span>
+									  </div>
+									  <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+									  <p class="name">Jacob Bolton</p>
+									  <span class="position">Wakil Pimpinan</span>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		</div>
+	  </section>
+
     <section class="ftco-section" data-section="team">
     	<div class="container-fluid p-0">
     		<div class="row no-gutters justify-content-center pb-5">
@@ -390,49 +429,6 @@
     	</div>
     </section>
 
-
-    <section class="testimony-section" data-section="testimony">
-      <div class="container">
-        <div class="row ftco-animate justify-content-center">
-        	<div class="col-md-12 d-flex align-items-center">
-        		<div class="carousel-testimony owl-carousel">
-	        		<div class="item">
-	        			<div class="testimony-wrap d-flex align-items-stretch">
-		              		<div class="user-img d-flex align-self-stretch" style="background-image: url({{ asset('images/testimony-1.jpg') }})">
-		              		</div>
-							<div class="text d-flex align-items-center">
-								<div>
-									<div class="icon-quote">
-										<span class="icon-quote-left"></span>
-									</div>
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-									<p class="name">Jacob Bolton</p>
-									<span class="position">Pimpinan Besar</span>
-								</div>
-							</div>
-		            	</div>
-	        		</div>
-	        		<div class="item">
-	        			<div class="testimony-wrap d-flex align-items-stretch">
-		              		<div class="user-img d-flex align-self-stretch" style="background-image: url({{ asset('images/testimony-2.jpg') }})"></div>
-							<div class="text d-flex align-items-center">
-								<div>
-									<div class="icon-quote">
-										<span class="icon-quote-left"></span>
-									</div>
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-									<p class="name">Jacob Bolton</p>
-									<span class="position">Wakil Pimpinan</span>
-								</div>
-							</div>
-		            	</div>
-	        		</div>
-	        	</div>
-        	</div>
-        </div>
-      </div>
-    </section>
-
     <section class="ftco-section bg-light" data-section="blog">
       	<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
@@ -451,7 +447,7 @@
 							<h3 class="heading"><a href="single.html">My Building</a></h3>
 							<p>Bidang ini menangani pekerjaan yang berhubungan dengan perencanaan arsitektur</p>
 							<div class="d-flex align-items-center mt-4 meta">
-								<p class="mb-0"><a href="#" class="btn btn-secondary">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
+								<p class="mb-0"><a href="#" class="btn btn-danger" style="color: white">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -464,7 +460,7 @@
 							<h3 class="heading"><a href="single.html">My Life</a></h3>
 							<p>Bidang ini menangani pekerjaan yang berhubungan dengan perencanaan arsitektur</p>
 							<div class="d-flex align-items-center mt-4 meta">
-								<p class="mb-0"><a href="#" class="btn btn-secondary">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
+								<p class="mb-0"><a href="#" class="btn btn-danger" style="color: white">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -477,7 +473,7 @@
 							<h3 class="heading"><a href="single.html">My Building</a></h3>
 							<p>Bidang ini menangani pekerjaan yang berhubungan dengan perencanaan arsitektur</p>
 							<div class="d-flex align-items-center mt-4 meta">
-								<p class="mb-0"><a href="#" class="btn btn-secondary">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
+								<p class="mb-0"><a href="#" class="btn btn-danger" style="color: white">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -490,7 +486,7 @@
 							<h3 class="heading"><a href="single.html">My Home</a></h3>
 							<p>Bidang ini menangani pekerjaan yang berhubungan dengan perencanaan arsitektur</p>
 							<div class="d-flex align-items-center mt-4 meta">
-								<p class="mb-0"><a href="#" class="btn btn-secondary">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
+								<p class="mb-0"><a href="#" class="btn btn-danger" style="color: white">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -503,7 +499,7 @@
 							<h3 class="heading"><a href="single.html">My Office</a></h3>
 							<p>Bidang ini menangani pekerjaan yang berhubungan dengan perencanaan arsitektur</p>
 							<div class="d-flex align-items-center mt-4 meta">
-								<p class="mb-0"><a href="#" class="btn btn-secondary">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
+								<p class="mb-0"><a href="#" class="btn btn-danger" style="color: white">Baca Selengkapnya <span class="ion-ios-arrow-round-forward"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -516,35 +512,16 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Contact</span>
-            <h2 class="mb-4">Contact Us</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <span class="subheading">Kontak</span>
+            <h2 class="mb-4">Lokasi Kami</h2>
+        
           </div>
         </div>
         <div class="row no-gutters block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-secondary py-3 px-5">
-              </div>
-            </form>
-          
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
+          <div class="col-md-12">
+          	<div id="map" class="bg-white">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1639449652653!2d98.7067770142932!3d3.5496489515509886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131f8b3e9684f%3A0x53bbace50480fadf!2sPT%20Deliana%20Inti%20Sukses!5e0!3m2!1sid!2sid!4v1665369390485!5m2!1sid!2sid" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
           </div>
         </div>
       </div>
@@ -558,8 +535,8 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-map-signs"></span>
           		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+          		<h3 class="mb-4">Alamat</h3>
+	            <p>Jl. Selamat No.149 E, Sitirejo III, Kec. Medan Amplas, Kota Medan, Sumatera Utara 20219</p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex">
@@ -567,8 +544,8 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-phone2"></span>
           		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+          		<h3 class="mb-4">No. Telp</h3>
+	            <p><a href="tel://1234567920">(061) 42776707</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex">
@@ -576,17 +553,17 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-paper-plane"></span>
           		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+          		<h3 class="mb-4">Email</h3>
+	            <p><a href="intisukses@gmail.com">intisukses@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex">
           	<div class="align-self-stretch box p-4 text-center">
           		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
+          			<span class="icon-alarm"></span>
           		</div>
-          		<h3 class="mb-4">Website</h3>
-	            <p><a href="#">yoursite.com</a></p>
+          		<h3 class="mb-4">Jam Buka</h3>
+	            <p><a href="#">07:00 - 17:00</a></p>
 	          </div>
           </div>
         </div>
@@ -599,7 +576,7 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Square</h2>
+              <h2 class="ftco-heading-2">PT. Deliana Inti Sukses</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -610,25 +587,20 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
+              <h2 class="ftco-heading-2">Link Terkait</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>PT. Firma Hukum</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Services</h2>
+              <h2 class="ftco-heading-2">Bisnis</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Architectural Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Interior Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Exterior Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Lighting Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>AutoCAD Service</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>My Building</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>My Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>My Life</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>My Office</a></li>
               </ul>
             </div>
           </div>
@@ -647,10 +619,8 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> MW Project</p>
+            <p style="opacity: 0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
           </div>
         </div>
       </div>
