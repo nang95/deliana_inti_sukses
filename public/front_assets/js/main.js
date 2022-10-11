@@ -173,10 +173,8 @@
 			}
 		});
 		$('.carousel-project').owlCarousel({
-			autoplay: true,
 			autoHeight: true,
 			center: false,
-			loop: true,
 			items:1,
 			margin: 30,
 			stagePadding: 0,

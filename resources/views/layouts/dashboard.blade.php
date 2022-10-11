@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Event App</title>
+    <title>PT. Deliana Inti Sukses</title>
 
     <meta name="description" content="Dashboard" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,7 +58,7 @@
                 <div class="navbar-header pull-left">
                     <a href="#" class="navbar-brand">
                         <small>
-                            <img src="{{ asset('img_assets/logo.png') }}" style="width: 80%; height: 40px; object-fit: contain" alt="" srcset="">
+                            <img src="{{ asset('images/font_logo_white.png') }}" style="width: 30%; height: 40px; object-fit: contain" alt="" srcset="">
                         </small>
                     </a>
                 </div>
