@@ -6,81 +6,67 @@
         </a>    
     </li>
 
-    {{-- <li>
-        <a href="#" class="menu-dropdown">
-            <div class="fas fa-th-large" style="padding-left: 7px; width: 30px"></div>
-            <span class="menu-text"> Master </span>
-            <i class="menu-expand"></i>
-        </a>
-        <ul class="submenu">
-            <li>
-                <a href="{{ route('admin.jabatan') }}">
-                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
-                    <span class="menu-text"> Jabatan </span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.bidang_keahlian') }}">
-                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
-                    <span class="menu-text"> Bidang Keahlian </span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.golongan') }}">
-                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
-                    <span class="menu-text"> Golongan </span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.unit_kerja') }}">
-                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
-                    <span class="menu-text"> Unit Kerja </span>
-                </a>
-            </li>
-        </ul>
-    </li>
-
     <li>
-        <a href="{{ route('admin.pendaftar') }}">
+        <a href="{{ route('admin.banner') }}">
             <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
-            <span class="menu-text"> Pendaftar </span>
+            <span class="menu-text"> Banner </span>
         </a>
     </li>
 
     <li>
-        <a href="{{ route('admin.pendaftar_ba') }}">
-            <div class="fas fa-broadcast-tower" style="padding-left: 7px; width: 30px"></div>
-            <span class="menu-text"> Berita Acara </span>
+        <a href="{{ route('admin.profil') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Profil </span>
         </a>
     </li>
 
     <li>
-        <a href="#" class="menu-dropdown">
-            <div class="fas fa-th-list" style="padding-left: 7px; width: 30px"></div>
-            <span class="menu-text"> Rombongan </span>
-            <i class="menu-expand"></i>
+        <a href="{{ route('admin.visi_misi') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Visi Misi </span>
         </a>
-        <ul class="submenu">
-            <li>
-                <a href="{{ route('admin.anggota') }}">
-                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
-                    <span class="menu-text"> Anggota </span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.pembelajaran') }}">
-                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
-                    <span class="menu-text"> Pembelajaran </span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.tim') }}">
-                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
-                    <span class="menu-text"> Tim </span>
-                </a>
-            </li>
-        </ul>
     </li>
 
-     --}}
+    <li>
+        <a href="{{ route('admin.bisnis') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Bisnis </span>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('admin.proyek') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Proyek </span>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('admin.founder') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Founder </span>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('admin.klien') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Klien </span>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('admin.kontak') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Kontak </span>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('admin.galeri') }}">
+            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Galero </span>
+        </a>
+    </li>
+
 </ul>
