@@ -34,9 +34,6 @@
     <link rel="stylesheet" href="{{ asset('back_assets/css/operator.css') }}">
 
     <!-- include summernote css/js -->
-    <link href="{{ asset('plugin_assets/summernote-0.8.18/summernote.min.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('plugin_assets/summernote-0.8.18/summernote.min.css') }}" rel="stylesheet">
     <link href="{{ asset('back_assets/css/main.css') }}" rel="stylesheet" type="text/css" />
 
     @yield('custom-style')
@@ -200,6 +197,7 @@
         });
     </script>
     <script src="{{ asset('plugin_assets/summernote-0.8.18/summernote.min.js') }}"></script>
+    <script src="{{ asset('plugin_assets/tinymce/tinymce.min.js') }}"></script>
     @yield('footer-scripts')
 </body>
 <!--  /Body -->

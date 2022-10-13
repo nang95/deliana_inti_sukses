@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Password...">
+                    <input type="password" name="password" placeholder="Password...">
                 </div>
 
                 <button>Simpan</button>
