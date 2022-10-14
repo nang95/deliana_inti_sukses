@@ -80,7 +80,7 @@
     <li>
         <a href="{{ route('admin.galeri') }}">
             <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
-            <span class="menu-text"> Galero </span>
+            <span class="menu-text"> Galeri </span>
         </a>
     </li>
 

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Visi
+    Misi
 @endsection
 
 @section('content')
@@ -23,10 +23,10 @@
                     </div>
                 @endif
                 <div class="collapse in">
-                    <form role="form" action="{{ route('admin.visi.update') }}" enctype="multipart/form-data" method="POST">
+                    <form role="form" action="{{ route('admin.misi.update') }}" enctype="multipart/form-data" method="POST">
                         {{ csrf_field() }} {{ method_field('PUT') }}
 
-                        <input type="hidden" name="id" value="{{ $visi->id }}">
+                        <input type="hidden" name="id" value="{{ $misi->id }}">
 
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>
@@ -39,7 +39,7 @@
                                     <button class="btn btn-success btn-sm" type="submit">Simpan</button>
                                 </div>
                                 <div class="col-md-6" style="text-align:right">
-                                    <a href="{{ route('admin.visi') }}">
+                                    <a href="{{ route('admin.misi') }}">
                                         <button class="btn btn-danger btn-sm" type="button">Batal</button>
                                     </a>  
                                 </div>

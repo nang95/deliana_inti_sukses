@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 class BannerController extends Controller
 {
-         /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -25,7 +25,7 @@ class BannerController extends Controller
             $banner->where('name', 'LIKE', '%'.$q_judul.'%');
         }
 
-        $banner = $banner->paginate();
+        $banner = $banner->paginate(10);
         $skipped = ($banner->perPage() * $banner->currentPage()) - $banner->perPage();
 
         return view('apps.admin.banner.index')->with('banner', $banner)

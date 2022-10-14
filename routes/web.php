@@ -30,6 +30,7 @@ Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
     Route::get('bisnis/edit/{bisnis}', 'BisnisController@edit')->name('bisnis.edit');
     Route::put('bisnis', 'BisnisController@update')->name('bisnis.update');
     Route::delete('bisnis', 'BisnisController@delete')->name('bisnis.delete');
+    Route::get('bisnis/download/{bisnis}', 'BisnisController@download')->name('bisnis.download');
 
     Route::get('proyek', 'ProyekController@index')->name('proyek');
     Route::get('proyek/create', 'ProyekController@create')->name('proyek.create');
@@ -37,6 +38,7 @@ Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
     Route::get('proyek/edit/{proyek}', 'ProyekController@edit')->name('proyek.edit');
     Route::put('proyek', 'ProyekController@update')->name('proyek.update');
     Route::delete('proyek', 'ProyekController@delete')->name('proyek.delete');
+    Route::get('proyek/download/{proyek}', 'ProyekController@download')->name('proyek.download');
 
     Route::get('banner', 'BannerController@index')->name('banner');
     Route::get('banner/edit/{banner}', 'BannerController@edit')->name('banner.edit');
@@ -46,14 +48,14 @@ Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
     Route::get('visi', 'VisiController@index')->name('visi');
     Route::get('visi/create', 'VisiController@create')->name('visi.create');
     Route::post('visi', 'VisiController@insert')->name('visi.insert');
-    Route::get('visi/edit/{visi}', 'VisiController@edit')->name('visi.edit');
+    Route::get('visi/edit/{visi_misi}', 'VisiController@edit')->name('visi.edit');
     Route::put('visi', 'VisiController@update')->name('visi.update');
     Route::delete('visi', 'VisiController@delete')->name('visi.delete');
 
     Route::get('misi', 'MisiController@index')->name('misi');
     Route::get('misi/create', 'MisiController@create')->name('misi.create');
     Route::post('misi', 'MisiController@insert')->name('misi.insert');
-    Route::get('misi/edit/{misi}', 'MisiController@edit')->name('misi.edit');
+    Route::get('misi/edit/{visi_misi}', 'MisiController@edit')->name('misi.edit');
     Route::put('misi', 'MisiController@update')->name('misi.update');
     Route::delete('misi', 'MisiController@delete')->name('misi.delete');
 
@@ -63,6 +65,7 @@ Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
     Route::get('founder/edit/{founder}', 'FounderController@edit')->name('founder.edit');
     Route::put('founder', 'FounderController@update')->name('founder.update');
     Route::delete('founder', 'FounderController@delete')->name('founder.delete');
+    Route::get('founder/download/{founder}', 'founderController@download')->name('founder.download');
 
     Route::get('kontak', 'KontakController@index')->name('kontak');
     Route::get('kontak/create', 'KontakController@create')->name('kontak.create');
@@ -81,8 +84,6 @@ Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
     Route::get('galeri', 'GaleriController@index')->name('galeri');
     Route::get('galeri/create', 'GaleriController@create')->name('galeri.create');
     Route::post('galeri', 'GaleriController@insert')->name('galeri.insert');
-    Route::get('galeri/edit/{galeri}', 'GaleriController@edit')->name('galeri.edit');
-    Route::put('galeri', 'GaleriController@update')->name('galeri.update');
     Route::delete('galeri', 'GaleriController@delete')->name('galeri.delete');
 });
 

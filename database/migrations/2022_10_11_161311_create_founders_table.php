@@ -16,6 +16,7 @@ class CreateFoundersTable extends Migration
         Schema::create('founders', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('jabatan');
             $table->string('foto');
             $table->timestamps();
         });

@@ -5,98 +5,91 @@
 @endsection
 
 @section('content')
-    @if(Session::has('flash_message'))
-    <script type="text/javascript">
-        Swal.fire("Berhasil!","{{ Session('flash_message') }}", "success");
-    </script>
-    @endif
-
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
-            <div class="well with-header with-footer">
-                <div class="header bg-red">
-                    Data Profil
-                </div>
-                <div class="row" style="margin-bottom: 10px">
-                    
-                </div>
-                <table class="table table-hover">
-                    <thead class="bordered-darkorange">
-                        <tr>
-                            <th width="5%">#</th>
-                            <th>Judul</th>
-                            <th>Deskripsi</th>
-                            <th>Gambar</th>
-                            <th width="30%">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        @if (count($profil) === 0)
-                        <tr>
-                            <td colspan="8" style="text-align:center">
-                                @if ($q_judul == "")
-                                    <span>Data Kosong</span>
-                                @else
-                                    <span>Kriteria yang anda cari tidak sesuai</span>
-                                @endif
-                            </td>
-                        </tr>
-                        @endif
-
-                        @foreach ($profil as $item)
-                        <tr>
-                            <td>{{ $loop->iteration + $skipped }}</td>
-                            <td>{{ $item->judul }}</td>
-                            <td>{!! Str::limit($item->deskripsi, $limit = 150, $end = '...') !!}</td>
-                            <td>
-                                <a href="{{ route('admin.profil.download', $item->id) }}">
-                                    <button class="btn btn-success btn-sm">download</button>
-                                </a>
-                            </td>
-                               <td>
-                                <a href="{{ route('admin.profil.edit', $item->id) }}">
-                                    <button class="btn btn-warning btn-sm">Ubah</button>
-                                </a>
-                            </td>
-                        </tr>
+<div class="row">
+    <div class="col-lg-8 col-sm-8">
+        <div class="widget">
+            <div class="widget-header bordered-top bordered-palegreen">
+                <span class="widget-caption">Edit Data</span>
+            </div>
+            
+            <div class="widget-body">
+                @if ($errors->any())
+                <div class="alert alert-danger" role="alert">
+                        @foreach ($errors->all() as $error)
+                            <ul>
+                                <li>{{ $error }}</li>
+                            </ul>
                         @endforeach
-                    </tbody>
-                </table>
+                    </div>
+                @endif
+                <div class="collapse in">
+                    <form role="form" action="{{ route('admin.profil.update') }}" enctype="multipart/form-data" method="POST">
+                        {{ csrf_field() }} {{ method_field('PUT') }}
 
-                <div class="footer">
-                    {{ $profil->appends(['q_judul' => $q_judul])->links() }}
+                        <input type="hidden" name="id" value="{{ $profil->id }}">
+
+                        <div class="form-group">
+                            <label for="judul">Judul</label>
+                            <input type="text" name="judul" value="{{ old('judul', $profil->judul) }}" class="form-control input-sm" id="gambar">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deskripsi">Deskripsi</label>
+                            <textarea name="deskripsi" class="default-editor" cols="3" rows="3">{{ $profil->deskripsi }}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gambar">Gambar</label>
+                            <input type="file" name="gambar" value="{{ old('gambar') }}" class="form-control input-sm" id="gambar">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="btn btn-success btn-sm" type="submit">Simpan</button>
+                                </div>
+                                <div class="col-md-6" style="text-align:right">
+                                    <a href="{{ route('admin.profil') }}">
+                                        <button class="btn btn-danger btn-sm" type="button">Batal</button>
+                                    </a>  
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-
         </div>
     </div>
+</div>
 @endsection
 
 @section('footer-scripts')
-<script type="text/javascript">
-    function deleteThis(e){
-        e.preventDefault();
-        Swal.fire({
-        title: "<div style='font-size:20px'>Apakah anda yakin?</div>",
-        html: "<div style='font-size:15px'>Data akan dihapus secara permanen!</div>",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Ya',
-        cancelButtonText: 'Batal'
-        })
-        .then((res) => {
-            if (res.isConfirmed) {
-                e.target.submit();
-                swal("Data telah dihapus!", {
-                icon: "success",
-                });
+<script>
+    tinymce.init({
+        height: 300,
+        selector: 'textarea.default-editor',
+        plugins: 'preview searchreplace autolink autosave save directionality advcode visualblocks fullscreen image link media template codesample table hr anchor insertdatetime advlist lists help code preview quickbars lists ',
+        toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment',
+         file_picker_callback: function(callback, value, meta) {
+            if (meta.filetype == 'image') {
+              $('#upload').trigger('click');
+              $('#upload').on('change', function() {
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                  callback(e.target.result, {
+                    alt: ''
+                  });
+                };
+                reader.readAsDataURL(file);
+              });
             }
-        });
-
-        return false;
-    }
+          },
+        image_advtab: true,
+        force_br_newlines : true,
+        fix_list_elements : true,
+        force_p_newlines : false,
+        forced_root_block : '' 
+    });
 </script>
 @endsection

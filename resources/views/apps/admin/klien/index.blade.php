@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Visi
+    Klien
 @endsection
 
 @section('content')
@@ -12,18 +12,19 @@
     @endif
 
     <div class="row">
-        <div class="col-lg-12 col-md-12">
+        <div class="col-lg-6 col-md-6">
             <div class="well with-header with-footer">
                 <div class="header bg-red">
-                    Data Visi
+                    Data Klien
                 </div>
                 <div class="row" style="margin-bottom: 10px">
                     <div class="col-md-6">
                         <!-- Search -->
                     <div class="d-flex justify-content-between mb-2">
-                        <a href="{{ route('admin.visi.create') }}">
+                        <a href="{{ route('admin.klien.create') }}">
                             <button class="btn btn-sm btn-success">Tambah</button>
                         </a>
+                        </form>
                     </div>
                     <!-- /Search -->
                     </div>
@@ -32,13 +33,14 @@
                     <thead class="bordered-darkorange">
                         <tr>
                             <th width="5%">#</th>
-                            <th>Isi</th>
+                            <th>Nama</th>
+                            <th>Logo</th>
                             <th width="30%">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         
-                        @if (count($visi) === 0)
+                        @if (count($klien) === 0)
                         <tr>
                             <td colspan="8" style="text-align:center">
                                 @if ($q_judul == "")
@@ -50,15 +52,20 @@
                         </tr>
                         @endif
 
-                        @foreach ($visi as $item)
+                        @foreach ($klien as $item)
                         <tr>
                             <td>{{ $loop->iteration + $skipped }}</td>
-                            <td>{!! Str::limit($item->deskripsi, $limit = 150, $end = '...') !!}</td>
+                            <td>{{ $item->nama }}</td>
                             <td>
-                                <a href="{{ route('admin.visi.edit', $item->id) }}">
+                                <a href="{{ route('admin.klien.download', $item->id) }}">
+                                    <button class="btn btn-success btn-sm">download</button>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.klien.edit', $item->id) }}">
                                     <button class="btn btn-warning btn-sm">Ubah</button>
                                 </a>
-                                <form onsubmit="deleteThis(event)" action="{{ route('admin.visi.delete') }}" method="POST" style="display:inline-block">
+                                <form onsubmit="deleteThis(event)" action="{{ route('admin.klien.delete') }}" method="POST" style="display:inline-block">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <input type="hidden" name="id" value="{{ $item->id }}">
                                     <button class="btn btn-danger btn-sm">Hapus</button>
@@ -70,7 +77,7 @@
                 </table>
 
                 <div class="footer">
-                    {{ $visi->appends(['q_judul' => $q_judul])->links() }}
+                    {{ $klien->appends(['q_judul' => $q_judul])->links() }}
                 </div>
             </div>
 

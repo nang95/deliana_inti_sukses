@@ -4,12 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\VisiMisi;
+use App\Models\Klien;
 use Session;
 use Illuminate\Support\Facades\File; 
 use Illuminate\Support\Facades\Storage;
 
-class VisiController extends Controller
+class KlienController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,19 +19,18 @@ class VisiController extends Controller
     public function index(Request $request)
     {
         $q_judul = $request->q_judul;
-        $visi_misi = VisiMisi::where('jenis', 'visi');
+        $klien = Klien::orderBy('id', 'DESC');
 
         if (!empty($q_judul)) {
-            $visi_misi->where('deskripsi', 'LIKE', '%'.$q_judul.'%');
+            $klien->where('judul', 'LIKE', '%'.$q_judul.'%');
         }
 
-        $visi_misi = $visi_misi->paginate(10);
-        $skipped = ($visi_misi->perPage() * $visi_misi->currentPage()) - $visi_misi->perPage();
+        $klien = $klien->paginate(10);
+        $skipped = ($klien->perPage() * $klien->currentPage()) - $klien->perPage();
 
-        return view('apps.admin.visi.index')->with('visi', $visi_misi)
-                                             ->with('skipped', $skipped)
-                                             ->with('q_judul', $q_judul);
-                                          
+        return view('apps.admin.klien.index')->with('klien', $klien)
+                                              ->with('skipped', $skipped)
+                                              ->with('q_judul', $q_judul);         
     }
 
     /**
@@ -39,9 +38,9 @@ class VisiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(VisiMisi $visi_misi)
+    public function create(Klien $klien)
     {
-        return view('apps.admin.visi.create');
+        return view('apps.admin.klien.create');
     }
 
     /**
@@ -53,12 +52,18 @@ class VisiController extends Controller
     public function insert(Request $request)
     {
         $data = $request->all();
-        $data['jenis'] = 'visi';
+        
+        if($request->file('foto')){
+            $file= $request->file('foto'); 
+            $filename= $file->getClientOriginalName();
+            $foto = $request->file('foto')->store('banner');
+            $data['foto'] = $foto;
+        }
 
-        VisiMisi::create($data);
+        Klien::create($data);
 
         Session::flash('flash_message', 'Data telah disimpan');
-        return redirect()->route('admin.visi');
+        return redirect()->route('admin.klien');
     }
 
     /**
@@ -67,9 +72,9 @@ class VisiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(VisiMisi $visi_misi)
+    public function edit(Klien $klien)
     {
-        return view('apps.admin.visi.edit')->with('visi', $visi_misi);
+        return view('apps.admin.klien.edit')->with('klien', $klien);
     }
 
     /**
@@ -81,13 +86,20 @@ class VisiController extends Controller
      */
     public function update(Request $request)
     {
-        $visi_misi = VisiMisi::findOrFail($request->id);
+        $klien = Klien::findOrFail($request->id);
         $data = $request->all();
-        $data['type'] = 'visi';
-        $visi_misi->update($data);
+
+        if($request->file('foto')){
+            $file= $request->file('foto'); 
+            $filename= $file->getClientOriginalName();
+            $foto = $request->file('foto')->store('klien');
+            $data['foto'] = $foto;
+        }
+
+        $klien->update($data);
         Session::flash('flash_message', 'Data telah disimpan');
     
-        return redirect()->route('admin.visi');
+        return redirect()->route('admin.klien');
     }
 
     /**
@@ -98,9 +110,13 @@ class VisiController extends Controller
      */
     public function delete(Request $request)
     {
-        $visi_misi = VisiMisi::findOrFail($request->id);
+        $klien = Klien::findOrFail($request->id);
         
-        $visi_misi->delete();
+        $klien->delete();
         return redirect()->back();
+    }
+
+    public function download(Klien $klien){
+        return Storage::disk('public')->download($klien->foto);
     }
 }

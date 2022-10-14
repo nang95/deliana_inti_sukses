@@ -13,3 +13,38 @@
 .custom-checkbox-danger{
     background-color:#F56C6C;
 }
+
+.img-galeri-wrapper{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.overlay-galeri{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(1, 1, 1, .3);
+    transition: .3s ease-in-out;
+}
+
+.overlay-galeri:hover{
+    opacity: 1;
+    background-color: rgba(1, 1, 1, .3);
+}
+
+.img-galeri{
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover;
+}
+
+.title-galeri{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

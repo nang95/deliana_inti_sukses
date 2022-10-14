@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Visi
+    Bisnis
 @endsection
 
 @section('content')
@@ -23,14 +23,24 @@
                     </div>
                 @endif
                 <div class="collapse in">
-                    <form role="form" action="{{ route('admin.visi.update') }}" enctype="multipart/form-data" method="POST">
+                    <form role="form" action="{{ route('admin.bisnis.update') }}" enctype="multipart/form-data" method="POST">
                         {{ csrf_field() }} {{ method_field('PUT') }}
 
-                        <input type="hidden" name="id" value="{{ $visi->id }}">
+                        <input type="hidden" name="id" value="{{ $bisnis->id }}">
+
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" class="form-control input-sm" value="{{ $bisnis->nama }}" id="gambar">
+                        </div>
 
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>
-                            <textarea name="deskripsi" class="default-editor" cols="3" rows="3"></textarea>
+                            <textarea name="deskripsi" class="default-editor" cols="3" rows="3">{{ $bisnis->deskripsi }}</textarea>
+                        </div>
+ 
+                        <div class="form-group">
+                            <label for="gambar">Gambar</label>
+                            <input type="file" name="gambar" class="form-control input-sm" id="gambar">
                         </div>
 
                         <div class="form-group">
@@ -39,7 +49,7 @@
                                     <button class="btn btn-success btn-sm" type="submit">Simpan</button>
                                 </div>
                                 <div class="col-md-6" style="text-align:right">
-                                    <a href="{{ route('admin.visi') }}">
+                                    <a href="{{ route('admin.bisnis') }}">
                                         <button class="btn btn-danger btn-sm" type="button">Batal</button>
                                     </a>  
                                 </div>

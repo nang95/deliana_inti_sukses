@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Visi
+    Misi
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
     <div class="col-lg-8 col-sm-8">
         <div class="widget">
             <div class="widget-header bordered-top bordered-palegreen">
-                <span class="widget-caption">Edit Data</span>
+                <span class="widget-caption">Tambah Data</span>
             </div>
             
             <div class="widget-body">
@@ -23,14 +23,22 @@
                     </div>
                 @endif
                 <div class="collapse in">
-                    <form role="form" action="{{ route('admin.visi.update') }}" enctype="multipart/form-data" method="POST">
-                        {{ csrf_field() }} {{ method_field('PUT') }}
+                    <form role="form" action="{{ route('admin.bisnis.insert') }}" enctype="multipart/form-data" method="POST">
+                        {{ csrf_field() }} {{ method_field('POST') }}
 
-                        <input type="hidden" name="id" value="{{ $visi->id }}">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" class="form-control input-sm" id="gambar">
+                        </div>
 
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>
                             <textarea name="deskripsi" class="default-editor" cols="3" rows="3"></textarea>
+                        </div>
+ 
+                        <div class="form-group">
+                            <label for="gambar">Gambar</label>
+                            <input type="file" name="gambar" class="form-control input-sm" id="gambar">
                         </div>
 
                         <div class="form-group">
@@ -39,7 +47,7 @@
                                     <button class="btn btn-success btn-sm" type="submit">Simpan</button>
                                 </div>
                                 <div class="col-md-6" style="text-align:right">
-                                    <a href="{{ route('admin.visi') }}">
+                                    <a href="{{ route('admin.misi') }}">
                                         <button class="btn btn-danger btn-sm" type="button">Batal</button>
                                     </a>  
                                 </div>
