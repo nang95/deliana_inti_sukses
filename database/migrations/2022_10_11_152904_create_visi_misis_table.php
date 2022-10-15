@@ -17,7 +17,6 @@ class CreateVisiMisisTable extends Migration
             $table->id();
             $table->string('jenis');
             $table->longtext('deskripsi');
-            $table->text('gambar');
             $table->timestamps();
         });
     }

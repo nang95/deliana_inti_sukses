@@ -21,10 +21,25 @@
     </li>
 
     <li>
-        <a href="{{ route('admin.visi_misi') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
-            <span class="menu-text"> Visi Misi </span>
+        <a href="#" class="menu-dropdown">
+            <div class="fas fa-th-large" style="padding-left: 7px; width: 30px"></div>
+            <span class="menu-text"> Visi & Misi </span>
+            <i class="menu-expand"></i>
         </a>
+        <ul class="submenu">
+            <li>
+                <a href="{{ route('admin.visi') }}">
+                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
+                    <span class="menu-text"> Visi </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('admin.misi') }}">
+                    <div class="fas fa-level-up-alt" style="width: 25px"></div>
+                    <span class="menu-text"> Misi </span>
+                </a>
+            </li>
+        </ul>
     </li>
 
     <li>
@@ -65,7 +80,7 @@
     <li>
         <a href="{{ route('admin.galeri') }}">
             <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
-            <span class="menu-text"> Galero </span>
+            <span class="menu-text"> Galeri </span>
         </a>
     </li>
 

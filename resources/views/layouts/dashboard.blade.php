@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="{{ asset('img_assets/favicon.png') }}" type="image/x-icon">
 
     <!--Basic Styles-->
     <link href="{{ asset('plugin_assets/bootstraps-v3.3.6/bootstrap.min.css') }}" rel="stylesheet" />
@@ -30,13 +29,9 @@
 
     {{-- IMPORTANT THINGS --}}
     <script src="{{ asset('back_assets/js/skins.min.js') }}"></script>
-    <link href="{{ asset('img_assets/favicon.png') }}" rel="icon">
     <link rel="stylesheet" href="{{ asset('back_assets/css/operator.css') }}">
 
     <!-- include summernote css/js -->
-    <link href="{{ asset('plugin_assets/summernote-0.8.18/summernote.min.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('plugin_assets/summernote-0.8.18/summernote.min.css') }}" rel="stylesheet">
     <link href="{{ asset('back_assets/css/main.css') }}" rel="stylesheet" type="text/css" />
 
     @yield('custom-style')
@@ -200,6 +195,7 @@
         });
     </script>
     <script src="{{ asset('plugin_assets/summernote-0.8.18/summernote.min.js') }}"></script>
+    <script src="{{ asset('plugin_assets/tinymce/tinymce.min.js') }}"></script>
     @yield('footer-scripts')
 </body>
 <!--  /Body -->
