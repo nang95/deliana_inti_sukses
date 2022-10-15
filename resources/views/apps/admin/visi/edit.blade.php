@@ -30,7 +30,7 @@
 
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>
-                            <textarea name="deskripsi" class="default-editor" cols="3" rows="3"></textarea>
+                            <textarea name="deskripsi" class="default-editor" cols="3" rows="3">{{ $visi->deskripsi }}</textarea>
                         </div>
 
                         <div class="form-group">

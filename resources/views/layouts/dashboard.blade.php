@@ -110,7 +110,6 @@
                                     </li>
                                 </ul>
                                 <!--/Notification Dropdown-->
-                                </>
                         </ul>
 
                     </div>

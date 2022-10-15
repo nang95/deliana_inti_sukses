@@ -21,6 +21,15 @@ class KontakController extends Controller
         $q_judul = $request->q_judul;
         $kontak = Kontak::first();
 
+        if (empty($kontak)) {
+            $kontak = Kontak::create([
+                'lokasi' => 'Judul...',
+                'facebook_url' => 'facebook.com',
+                'instagram_url' => 'intagram.com',
+                'twitter_url' => 'twitter.com',
+            ]);
+        }
+
         return view('apps.admin.kontak.index')->with('kontak', $kontak)
                                               ->with('q_judul', $q_judul);                    
     }

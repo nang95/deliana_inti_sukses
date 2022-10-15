@@ -18,8 +18,15 @@ class ProfilController extends Controller
      */
     public function index(Request $request)
     {
-        $q_judul = $request->q_judul;
         $profil = Profil::first();
+
+        if (empty($profil)) {
+            $profil = Profil::create([
+                'judul' => 'Judul...',
+                'deskripsi' => 'Deskripsi...',
+                'gambar' => null
+            ]);
+        }
 
         return view('apps.admin.profil.index')->with('profil', $profil);                        
     }
@@ -36,11 +43,11 @@ class ProfilController extends Controller
         $profil = Profil::findOrFail($request->id);
         $data = $request->all();
 
-        if($request->file('foto')){
-            $file= $request->file('foto'); 
+        if($request->file('gambar')){
+            $file= $request->file('gambar'); 
             $filename= $file->getClientOriginalName();
-            $foto = $request->file('foto')->store('profil');
-            $data['foto'] = $foto;
+            $gambar = $request->file('gambar')->store('profil');
+            $data['gambar'] = $gambar;
         }
 
         $profil->update($data);

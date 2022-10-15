@@ -18,7 +18,7 @@ class CreateProyeksTable extends Migration
             $table->string('jenis')->nullable();
             $table->string('nama');
             $table->longtext('deskripsi');
-            $table->string('gambar');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
