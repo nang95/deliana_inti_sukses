@@ -17,7 +17,7 @@ class CreateProfilsTable extends Migration
             $table->id();
             $table->string('judul');
             $table->longtext('deskripsi');
-            $table->string('gambar');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

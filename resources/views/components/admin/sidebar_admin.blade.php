@@ -8,14 +8,14 @@
 
     <li>
         <a href="{{ route('admin.banner') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <div class="fa fa-image" style="padding-left: 7px; width: 30px"></div>
             <span class="menu-text"> Banner </span>
         </a>
     </li>
 
     <li>
         <a href="{{ route('admin.profil') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <div class="fa fa-building" style="padding-left: 7px; width: 30px"></div>
             <span class="menu-text"> Profil </span>
         </a>
     </li>
@@ -44,14 +44,14 @@
 
     <li>
         <a href="{{ route('admin.bisnis') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <div class="fas fa-briefcase" style="padding-left: 7px; width: 30px"></div>
             <span class="menu-text"> Bisnis </span>
         </a>
     </li>
 
     <li>
         <a href="{{ route('admin.proyek') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <div class="fa fa-tasks" style="padding-left: 7px; width: 30px"></div>
             <span class="menu-text"> Proyek </span>
         </a>
     </li>
@@ -65,21 +65,21 @@
 
     <li>
         <a href="{{ route('admin.klien') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <div class="fa fa-copyright" style="padding-left: 7px; width: 30px"></div>
             <span class="menu-text"> Klien </span>
         </a>
     </li>
 
     <li>
         <a href="{{ route('admin.kontak') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <div class="fas fa-phone-alt" style="padding-left: 7px; width: 30px"></div>
             <span class="menu-text"> Kontak </span>
         </a>
     </li>
 
     <li>
         <a href="{{ route('admin.galeri') }}">
-            <div class="fas fa-users" style="padding-left: 7px; width: 30px"></div>
+            <div class="fas fa-images" style="padding-left: 7px; width: 30px"></div>
             <span class="menu-text"> Galeri </span>
         </a>
     </li>

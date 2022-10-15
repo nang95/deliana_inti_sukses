@@ -26,14 +26,17 @@
                 </div>
                 
                 <div class="row">
+                    @if (count($galeri) === 0)
+                        <div class="col-md-12" style="text-align: center"><h5><b>Data Kosong</b></h5></div>
+                    @endif
                     @foreach ($galeri as $item)
                     <div class="col-md-4">
                         <div class="img-galeri-wrapper">
                             <div class="overlay-galeri">
-                                <div class="title-galeri">
-                                    <div>{{ $item->judul }}</div>
+                                <div class="title-wrapper">
+                                    <div class="title-galeri">{{ $item->judul }}</div>
                                     <div>
-                                        <form onsubmit="deleteThis(event)" action="{{ route('admin.bisnis.delete') }}" method="POST" style="display:inline-block">
+                                        <form onsubmit="deleteThis(event)" action="{{ route('admin.galeri.delete') }}" method="POST" style="display:inline-block">
                                             {{ csrf_field() }} {{ method_field('DELETE') }}
                                             <input type="hidden" name="id" value="{{ $item->id }}">
                                             <button class="btn btn-danger btn-sm">Hapus</button>

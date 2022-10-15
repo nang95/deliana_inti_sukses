@@ -35,7 +35,7 @@
                         
                         <div class="form-group">
                             <label for="jabatan">Jabatan</label>
-                            <input type="text" name="jabatan" class="form-control input-sm" id="jabatan">
+                            <input type="text" name="jabatan" class="form-control input-sm" value="{{ $founder->jabatan }}" id="jabatan">
                         </div>
 
                         <div class="form-group">

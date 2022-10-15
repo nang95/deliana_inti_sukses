@@ -16,7 +16,7 @@ class CreateKliensTable extends Migration
         Schema::create('kliens', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('logo');
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

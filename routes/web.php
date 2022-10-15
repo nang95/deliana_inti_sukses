@@ -12,7 +12,7 @@ Route::namespace('User')->group(function(){
     Route::get('/', 'HomeController@index')->name('/');
 });
 
-Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
+Route::namespace('Admin')->middleware('auth')->name('admin.')->prefix('admin')->group(function(){
     Route::get('/', 'DashboardController@index')->name('/');
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
