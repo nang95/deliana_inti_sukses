@@ -86,30 +86,30 @@
 
 
 	// Page Nav
-	var clickMenu = function() {
+	// var clickMenu = function() {
 
-		$('#ftco-nav a:not([class="external"])').click(function(event){
-			var section = $(this).data('nav-section'),
-				navbar = $('#ftco-nav');
+	// 	$('#ftco-nav a:not([class="external"])').click(function(event){
+	// 		var section = $(this).data('nav-section'),
+	// 			navbar = $('#ftco-nav');
 
-				if ( $('[data-section="' + section + '"]').length ) {
-			    	$('html, body').animate({
-			        	scrollTop: $('[data-section="' + section + '"]').offset().top - 70
-			    	}, 500);
-			   }
+	// 			if ( $('[data-section="' + section + '"]').length ) {
+	// 		    	$('html, body').animate({
+	// 		        	scrollTop: $('[data-section="' + section + '"]').offset().top - 70
+	// 		    	}, 500);
+	// 		   }
 
-		    if ( navbar.is(':visible')) {
-		    	navbar.removeClass('in');
-		    	navbar.attr('aria-expanded', 'false');
-		    	$('.js-fh5co-nav-toggle').removeClass('active');
-		    }
+	// 	    if ( navbar.is(':visible')) {
+	// 	    	navbar.removeClass('in');
+	// 	    	navbar.attr('aria-expanded', 'false');
+	// 	    	$('.js-fh5co-nav-toggle').removeClass('active');
+	// 	    }
 
-		    event.preventDefault();
-		    return false;
-		});
+	// 	    event.preventDefault();
+	// 	    return false;
+	// 	});
 
-	};
-	clickMenu();
+	// };
+	// clickMenu();
 
 	// Reflect scrolling in navigation
 	var navActive = function(section) {
@@ -150,10 +150,8 @@
 
 	var carousel = function() {
 		$('.carousel-testimony').owlCarousel({
-			autoplay: true,
 			autoHeight: true,
 			center: true,
-			loop: true,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
@@ -173,7 +171,7 @@
 			}
 		});
 		$('.carousel-project').owlCarousel({
-			autoHeight: true,
+			height: 400,
 			center: false,
 			items:1,
 			margin: 30,

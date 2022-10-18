@@ -40,6 +40,21 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <input type="text" name="alamat" value="{{ old('alamat', $kontak->alamat) }}" class="form-control input-sm" id="gambar">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" value="{{ old('email', $kontak->email) }}" class="form-control input-sm" id="gambar">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="no_telp">No Telp</label>
+                            <input type="text" name="no_telp" value="{{ old('no_telp', $kontak->no_telp) }}" class="form-control input-sm" id="gambar">
+                        </div>
+
+                        <div class="form-group">
                             <label for="facebook_url">Facebook Url</label>
                             <input type="text" name="facebook_url" value="{{ old('facebook_url', $kontak->facebook_url) }}" class="form-control input-sm" id="gambar">
                         </div>

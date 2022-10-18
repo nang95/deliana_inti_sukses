@@ -1,4 +1,4 @@
-<section class="hero-wrap js-fullheight" style="background-image: url('{{ asset('images/bg_1.jpg') }}');" data-section="home">
+<section class="hero-wrap js-fullheight" style="background-image: url('{{ asset('http://localhost:8000/storage/'.$banner->gambar) }}');" data-section="home">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">

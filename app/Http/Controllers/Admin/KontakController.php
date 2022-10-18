@@ -24,6 +24,9 @@ class KontakController extends Controller
         if (empty($kontak)) {
             $kontak = Kontak::create([
                 'lokasi' => 'Judul...',
+                'alamat' => 'Jl. Testing',
+                'no_telp' => '+021 390192',
+                'email' => 'email@gmail.com',
                 'facebook_url' => 'facebook.com',
                 'instagram_url' => 'intagram.com',
                 'twitter_url' => 'twitter.com',

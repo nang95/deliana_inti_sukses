@@ -1,17 +1,13 @@
-<section class="ftco-section ftco-project bg-light" data-section="projects">
-    <div class="container-fluid px-md-5">
-        <div class="row justify-content-center pb-5">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-                <span class="subheading">Bisnis</span>
-                <h2 class="mb-4">Bisnis Kami</h2>
-                <p>Perkenalkan Bisnis-Bisnis Besar Kami</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 testimonial">
-                <div class="carousel-project owl-carousel">
-                    @foreach ($bisnis as $item)
-                    <div class="item">
+@extends('layouts.single')
+
+@section('content')
+	@include('components.frontend.navbar')
+	@include('components.frontend.single_banner', ['main_title' => 'Bisnis Kami'])  
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                @foreach ($bisnis as $item)
+                    <div class="col-md-4">
                         <div class="project">
                             <div class="img">
                                 <img src="{{ asset('http://localhost:8000/storage/'. $item->gambar) }}" class="img-fluid" alt="Colorlib Template">
@@ -25,9 +21,9 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
-                </div>
+                @endforeach
             </div>
         </div>
-    </div>
-</section>
+      </section>
+	@include('components.frontend.footer')
+@endsection

@@ -7,12 +7,13 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav nav ml-auto">
-          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="home"><span>Beranda</span></a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="blog"><span>Visi & Misi</span></a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="about"><span>Tentang Kami</span></a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="projects"><span>Proyek</span></a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="team"><span>Bisnis</span></a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="testimony"><span>Galeri</span></a></li>
+          <li class="nav-item"><a href="{{ route('/') }}" class="nav-link"><span>Beranda</span></a></li>
+          <li class="nav-item"><a href="{{ route('visi_misi') }}" class="nav-link"><span>Visi & Misi</span></a></li>
+          <li class="nav-item"><a href="{{ route('tentang_kami') }}" class="nav-link"><span>Tentang Kami</span></a></li>
+          <li class="nav-item"><a href="{{ route('proyek') }}" class="nav-link"><span>Proyek</span></a></li>
+          <li class="nav-item"><a href="{{ route('bisnis') }}" class="nav-link"><span>Bisnis</span></a></li>
+          <li class="nav-item"><a href="{{ route('galeri') }}" class="nav-link"><span>Galeri</span></a></li>
+          <li class="nav-item"><a href="{{ route('kontak') }}" class="nav-link"><span>Kontak</span></a></li>
         </ul>
       </div>
     </div>

@@ -10,6 +10,14 @@ Route::get('/linkstorage', function () {
 
 Route::namespace('User')->group(function(){
     Route::get('/', 'HomeController@index')->name('/');
+    Route::get('visi_misi', 'VisiMisiController@index')->name('visi_misi');
+    Route::get('tentang_kami', 'TentangKamiController@index')->name('tentang_kami');
+    Route::get('proyek', 'ProyekController@index')->name('proyek');
+    Route::get('proyek/{proyek}', 'ProyekController@detail')->name('proyek.detail');
+    Route::get('bisnis', 'BisnisController@index')->name('bisnis');
+    Route::get('bisnis/{bisnis}', 'BisnisController@detail')->name('bisnis.detail');
+    Route::get('galeri', 'GaleriController@index')->name('galeri');
+    Route::get('kontak', 'KontakController@index')->name('kontak');
 });
 
 Route::namespace('Admin')->middleware('auth')->name('admin.')->prefix('admin')->group(function(){
